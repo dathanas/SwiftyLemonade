@@ -7,31 +7,20 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-  
     @EnvironmentObject private var model: SwiftyLemonadeClipModel
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
     var body: some View {
+      //Check if there is a selectedStand and if true add tha MenuList view as the root view
         if let selectedStand = model.selectedStand {
             NavigationView {
                 MenuList(stand: selectedStand)
             }
         }
       
+      //If there is no stand in the location just show the user a message
         if model.locationFound == false {
             Text("Error finding stand.")
         }
 
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
