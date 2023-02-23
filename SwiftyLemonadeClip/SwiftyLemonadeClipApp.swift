@@ -17,7 +17,8 @@ struct SwiftyLemonadeClipApp: App {
               .environmentObject(model)
               .onContinueUserActivity(
                 NSUserActivityTypeBrowsingWeb,
-                perform: handleUserActivity) // register a handler for NSUserActivityTypeBrowsingWeb. iOS invokes this handler when it encounters an App Clip experience URL
+                perform: handleUserActivity)
+          // register a handler for NSUserActivityTypeBrowsingWeb. iOS invokes this handler when it encounters an App Clip experience URL
          }
     }
 

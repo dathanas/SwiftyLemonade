@@ -161,6 +161,7 @@
 		8D54B3D4299F7219004A655A /* SwiftyLemonadeClip */ = {
 			isa = PBXGroup;
 			children = (
+				8D54B3D5299F7219004A655A /* SwiftyLemonadeClipApp.swift */,
 				8D54B3F7299F8039004A655A /* SwiftyLemonadeClipModel.swift */,
 				8D54B3D7299F7219004A655A /* ContentView.swift */,
 				8D54B3D9299F721A004A655A /* Assets.xcassets */,
@@ -176,7 +177,6 @@
 		8D54B3DB299F721A004A655A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				8D54B3D5299F7219004A655A /* SwiftyLemonadeClipApp.swift */,
 				8D54B3DC299F721A004A655A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
